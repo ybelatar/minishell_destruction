@@ -1,10 +1,10 @@
-  1/ do unset PATH -> create a script named ls -> do ls (possibly differ from bash)
+  1/ do unset PATH -> create a script named ls -> do ls (possibly differs from bash)
 
   2/ do unset PWD -> do cd .. (possible segfault)
 
   3/ do & (possible brick)
 
-  4/ do cat -e <<test <<tes <<te  <infile >out1 >out2 | grep a <<pomme >out3 (possibly differ from bash)
+  4/ do cat -e <<test <<tes <<te  <infile >out1 >out2 | grep a <<pomme >out3 (possibly differs from bash)
 
   5/ launch minishell with env -i in front of it (possible segfault)
 
@@ -12,7 +12,7 @@
 
   7/ do *any directory in cwd* with arguments (possible leak) / do *
 
-  8/ do echo test$USER+$PWD / do echo $1fdfsdfsdfsdf / do $'' / do $"" (possibly differ from bash)
+  8/ do echo test$USER+$PWD / do echo $1fdfsdfsdfsdf / do $'' / do $"" (possibly differs from bash)
 
   9/ do >out1 | >out2 / do <<test | <<test1 (possible everything)
 
@@ -20,8 +20,8 @@
 
   11/ do *random non-existing command* | *anything you want* (possible leak)
 
-  12/ try signals in blocking commands and in heredocs (possibly differ from bash)
+  12/ try signals in blocking commands and in heredocs (possibly differs from bash)
 
-  13/ do echo -nnnnnnnnnnnn -nn -nn test -> should display test without a \n (possibly differ from bash)
+  13/ do echo -nnnnnnnnnnnn -nn -nn test -> should display test without a \n (possibly differs from bash)
 
-  14/ 
+  14/ try expanding env variables in heredoc (possibly differs from bash)
