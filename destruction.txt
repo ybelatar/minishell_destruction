@@ -29,3 +29,5 @@
   15/ create a simlink directory and put its name as a command (possible leak)
 
   16/ create an executable named ..ls in /bin and do ..ls
+
+  17/ do ls > $MOHA -> should say ambigous redirect
